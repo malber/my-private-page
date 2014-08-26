@@ -1,55 +1,84 @@
 // Main app entry point
 $(document).ready(function() {
 	// First of all, run tests
-	runTests();
 	onAppLaunch();
 
 	__("Started {0} without errors", "myApp");
 });
 
 var g_model = {};
+var g_controller = {};
+var g_view = {};
 
 function onAppLaunch(){
-	var Job = Backbone.Model.extend({
-	    defaults: {
-	        companyName: 'none',
-	    }
-
-	});
-
-
-	var fc = new Job({ id: 1, companyName: 'Fastcom' });
-	var abl = new Job({ id: 2, companyName: 'Ableton' });
-
-	var JobCollection = Backbone.Collection.extend({
-	    model: Job,
-	    url:"models/JobCollection.json",
-
-	});
-	 
-
-	var jCollection = new JobCollection();
-	jCollection.fetch({ url: "models/JobCollection.json", success: function() {
-		g_model.jobs = jCollection;
-		onLoadedModels();
-	}});
-
-
-
-
-
+	// Async loading models
+	g_model = new Model(onLoadedModels);
 }
 
 function onLoadedModels(){
-	var template = _.template($('#job-list-template').html(), { jobs: g_model.jobs.models });
-	$(".content").html(template);
+
+	initCharts();
+
+	g_controller = new Controller(g_model);
+	g_view = new View(g_model, g_controller);
 
 	return;
-	var jobArray = [fc, abl];
-	var jobs = new JobCollection(jobArray);  
+}
 
+
+function addListeners(){
+	window.addEventListener('resize', resizeCanvas, false);
+}
+
+function resizeCanvas() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        drawStuff(); 
+}
+
+
+function initCharts(){
+	var ctx = document.getElementById("timelineChart").getContext("2d");
+
+	var data = {
+	    labels: ["January", "February", "March", "April", "May", "June", "July"],
+	    datasets: [
+	        {
+	            label: "My First dataset",
+	            fillColor: "rgba(220,220,220,0.2)",
+	            strokeColor: "rgba(220,220,220,1)",
+	            pointColor: "rgba(220,220,220,1)",
+	            pointStrokeColor: "#fff",
+	            pointHighlightFill: "#fff",
+	            pointHighlightStroke: "rgba(220,220,220,1)",
+	            data: [65, 59, 80, 81, 56, 55, 40]
+	        },
+	        {
+	            label: "My Second dataset",
+	            fillColor: "rgba(151,187,205,0.2)",
+	            strokeColor: "rgba(151,187,205,1)",
+	            pointColor: "rgba(151,187,205,1)",
+	            pointStrokeColor: "#fff",
+	            pointHighlightFill: "#fff",
+	            pointHighlightStroke: "rgba(151,187,205,1)",
+	            data: [28, 48, 40, 19, 86, 27, 90]
+	        }
+	    ]
+	};
+
+
+	var myLineChart = new Chart(ctx).Line(data, {scaleShowGridLines : true});
 
 }
+
+
+
+
+
+
+
+
 
 
 

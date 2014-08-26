@@ -1,10 +1,19 @@
 [
     {
         "id": "1",
-        "companyName": "Fastcom"
+        "companyName": "EPFL"
     },
     {
         "id": "2",
+        "companyName": "Fastcom"
+    },
+    {
+        "id": "3",
         "companyName": "Ableton"
+    },
+    {
+        "id": "4",
+        "companyName": "Personal"
     }
+
 ]

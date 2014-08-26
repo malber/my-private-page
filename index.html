@@ -9,6 +9,9 @@
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
+    <!-- Bootstrap -->
+    <link href="css/mainApp.css" rel="stylesheet">
+
   </head>
   <body>
 	<div class="navbar navbar-default">
@@ -23,29 +26,37 @@
 	</div>
 
 
+  <!-- Graph -->
 
 
-	<div id="header"><span class="title">Job List</span></div>
-	<div class="content"></div>
 
-<script type="text/template" id="job-list-template">
-<table>
-  <thead>
-    <tr>
-      <th>Id</th>
-      <th>Company Name</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% _.each(jobs, function(job) { %>
+
+  <!-- Template for list of jobs -->
+  <div id="header"><span class="title">Job List</span></div>
+  <div class="content"></div>
+
+    <script type="text/template" id="job-list-template">
+    <table>
+    <thead>
       <tr>
-        <td><%= job.get('id') %></td>
-        <td><%= job.get('companyName') %></td>
+        <th>Id</th>
+        <th>Company Name</th>
       </tr>
-    <% }); %>
-  </tbody>
-</table>
-</script>
+    </thead>
+    <tbody>
+      <% _.each(jobs, function(job) { %>
+        <tr>
+          <td><%= job.get('id') %></td>
+          <td><%= job.get('companyName') %></td>
+        </tr>
+      <% }); %>
+    </tbody>
+    </table>
+    </script>
+
+<canvas id="timelineChart" ></canvas>
+
+
 
 
 	<!-- SCRIPTS -->
@@ -58,11 +69,17 @@
     <script src="Chart.js/Chart.min.js"></script>
 
 
-	<!-- Helpers-->
+    <!-- Helpers-->
     <script src="js/appHelper.js"></script>
 
-	<!-- Main app and tests -->
-	<script src="js/mainApp.js"></script>
+    <!-- MVC stuff -->
+    <script src="js/Model.js"></script>
+    <script src="js/View.js"></script>
+    <script src="js/Controller.js"></script>
+
+
+  	<!-- Main app and tests -->
+  	<script src="js/mainApp.js"></script>
 
   </body>
 </html>

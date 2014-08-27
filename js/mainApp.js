@@ -3,7 +3,6 @@ $(document).ready(function() {
 	// First of all, run tests
 	onAppLaunch();
 
-	__("Started {0} without errors", "myApp");
 });
 
 var g_model = {};
@@ -17,6 +16,7 @@ function onAppLaunch(){
 function onLoadedModels(){
 
 //	g_controller = new Controller(g_model);
+	__(g_model.gProjCollection);
 	g_view = new View({model: g_model});
 	return;
 }

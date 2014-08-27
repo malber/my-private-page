@@ -3,24 +3,28 @@
         "id": "1",
         "companyName": "EPFL",
         "imageUrl":"images/epfl.png",
+        "role":"Ph.D / post-doctoral researcher",
         "description":"Ph.D. researcher in software modelling of Nuclear Fusion phenomena (11 publications). Post-doc intern in a startup,  development of Image processing algorithms for a panoramic camera.<br>Main topics: HDR, pattern recognition,OpenCV.  Showcase of products with venture capital investors."
     },
     {
         "id": "2",
         "companyName": "Fastcom",
         "imageUrl":"images/fastcom.png",
+        "role":"Ph.D / post-doctoral researcher",
         "description":"Project and team manager (Agile) in the consulting branch of Fastcom Technology. <br>Example of projects: JSON gateway (Securiton, 80 kCHF): development of a C#/.NET websocket-based messaging gateway between a surveillance software suite and an iOS client. Webclient (Securiton, 350+ kCHF): development of a HTML5/Backbone.js/jQuery webclient for secured area supervision, stream of camera videos and camera control via websocket communication All projects were delivered within schedule with Agile methodologies."
     },
     {
         "id": "3",
         "companyName": "Ableton",
         "imageUrl":"images/ableton.png",
+        "role":"Agile coach",
         "description" : "Agile project manager in the division responsible for the development of the Live application (25 people).  I am responsible for the management of the Scrum process and I ensure the proper power balance between Product Owner, team, and the board of directors, as well as educate and coach team members about Agile and Lean. I oversee the operations of a successful team of highly talented software developers and constantly report to the company’s CEO and development managers about the team’s advances."
     },
     {
         "id": "6",
         "companyName": "EFDA",
         "imageUrl":"images/bicocca.png",
+        "role":"Intern",
         "description":"Development of algorithms for the analysis of Nuclear Fusion phenomena (C++/Python). Work carried out under a fellowship granted by the Italian Embassy in London."
     }
 

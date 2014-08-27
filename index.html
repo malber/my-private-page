@@ -78,6 +78,7 @@
 
   <!-- Template for main body item -->
   <script type="text/template" id="job-mainbody-item-template">
+  <div class="jobBodyRole"><%= item.get('role') %> </div>
   <div class="jobBodyText"><%= item.get('description') %> </div>
   </script>
 
@@ -106,6 +107,11 @@
     <script src="js/JobCollection.js"></script>
     <script src="js/JobDropdownView.js"></script>
     <script src="js/JobMainBodyView.js"></script>
+
+    <script src="js/GithubProject.js"></script>
+    <script src="js/GithubProjectCollection.js"></script>
+
+
     <script src="js/Model.js"></script>
     <script src="js/View.js"></script>
 

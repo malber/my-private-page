@@ -13,6 +13,9 @@ img.dropdownImage {
 	cursor:pointer;
 }
 
+.jobBodyRole{
+    font-weight: bold;
+}
 .JobDropdownViewItem span:first-of-type{
 	margin-left: 10px;
 

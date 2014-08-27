@@ -4,6 +4,7 @@ var Job = Backbone.Model.extend({
         companyName: 'none',
         imageUrl : 'images/default.png',
         description: '',
+        role:''
     },
 	initialize: function(){
 	}

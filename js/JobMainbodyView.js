@@ -1,8 +1,8 @@
-var JobDropdownViewItem = Backbone.View.extend({
-    tagName: 'li',
-    className: 'JobDropdownViewItem',
+var JobMainBodyViewItem = Backbone.View.extend({
+    tagName: 'div',
+    className: 'JobMainBodyViewItem',
     initialize: function() {
-        this.template = _.template($('#job-dropdown-item-template').html());
+        this.template = _.template($('#job-mainbody-item-template').html());
         this.render();
     },
     render: function() {
@@ -11,8 +11,8 @@ var JobDropdownViewItem = Backbone.View.extend({
     }
 });
 
-var JobDropdownView = Backbone.View.extend({
-    el: '#JobDropdownView',
+var JobMainBodyView = Backbone.View.extend({
+    el: '#JobMainBodyView',
     tagName: 'ul',
     className: 'todolist',
     initialize: function() {
@@ -22,9 +22,10 @@ var JobDropdownView = Backbone.View.extend({
     render: function() {
         self = this;
         this.$el.empty();
+        __(self);
         // this.$el.append(this.template());
         this.collection.each(function(model) {
-            var tmp = new JobDropdownViewItem({model: model});
+            var tmp = new JobMainBodyViewItem({model: model});
             self.$el.append(tmp.$el);
         });
         return this;

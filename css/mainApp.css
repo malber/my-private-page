@@ -9,14 +9,23 @@ img.dropdownImage {
 }
 
 .JobDropdownViewItem{
-  height: 50px;
-  cursor:pointer;
+	height: 50px;
+	cursor:pointer;
 }
 
 .JobDropdownViewItem span:first-of-type{
-		margin-left: 10px;
+	margin-left: 10px;
 
 }
 
+.JobMainBodyViewItem{
+	margin: 20px 20px 20px 5px;
+
+}
+div.jobBodyText{
+	max-width: 800px;
+	text-align: justify;
+    text-justify: inter-word;
+}
 
 p { display: inline }

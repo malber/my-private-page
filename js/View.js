@@ -1,16 +1,15 @@
 View = Backbone.View.extend({
 	defaults: {
-		mjobDropdownViewItem : null
+        mjobDropdownView : null,
+        mjobMainBodyView : null
 	},
     initialize: function(){
         this.mjobDropdownView = new JobDropdownView({collection : g_model.mJobCollection});
-        // this.mjobDropdownViewItem = new JobDropdownViewItem({model : g_model.mJobCollection.models[0]});
-
+        this.mjobMainBodyView = new JobMainBodyView({collection : g_model.mJobCollection});
     	// Here we have to load all required views
         this.render();
     },
     render: function(){
-//  		this.mjobDropdownView.render();
     	// Here nothing is required
 
     },

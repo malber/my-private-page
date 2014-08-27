@@ -21,20 +21,20 @@
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
-    <a class="navbar-brand" href="#">Brand</a>
+    <a class="navbar-brand" href="#">Mattia Albergante</a>
   </div>
   <div class="navbar-collapse collapse navbar-responsive-collapse">
     <ul class="nav navbar-nav">
       <li class="dropdown active">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Professional Experience <b class="caret"></b></a>
-        <ul class="dropdown-menu">
-          <li><a href="#">Action</a></li>
+        <ul id="JobDropdownView" class="dropdown-menu">
+<!--           <li><a href="#">Action</a></li>
           <li><a href="#">Another action</a></li>
-          <li><a href="#">Something else here</a></li>
+          <li><a href="#">Something else here</a></li> 
           <li class="divider"></li>
           <li class="dropdown-header">Education</li>
-          <li><a href="#">Separated link</a></li>
-          <li><a href="#">One more separated link</a></li>
+           <li><a href="#">Separated link</a></li>
+          <li><a href="#">One more separated link</a></li> -->
         </ul>
       </li>
       <li><a href="#">Projects</a></li>
@@ -56,10 +56,24 @@
 </div>
 
 
+
+
   <!-- Graph -->
   <canvas id="timelineChart" ></canvas>
 
 
+
+
+
+  <!-- TEMPLATES -->
+  <script type="text/template" id="job-dropdown-item-template">
+  <li>
+      <%= item.get('companyName') %>
+  </li>
+  </script>
+
+  <!-- Test -->
+  <div id="content"></div>
 
 
 	<!-- SCRIPTS -->
@@ -78,6 +92,7 @@
     <!-- MVC stuff -->
     <script src="js/Job.js"></script>
     <script src="js/JobCollection.js"></script>
+    <script src="js/JobDropdownView.js"></script>
     <script src="js/Model.js"></script>
     <script src="js/View.js"></script>
 

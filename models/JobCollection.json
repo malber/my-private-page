@@ -1,19 +1,23 @@
 [
     {
         "id": "1",
-        "companyName": "EPFL"
+        "companyName": "EPFL",
+        "imageUrl":"images/epfl.png"
     },
     {
         "id": "2",
-        "companyName": "Fastcom"
+        "companyName": "Fastcom",
+        "imageUrl":"images/fastcom.png"
     },
     {
         "id": "3",
-        "companyName": "Ableton"
+        "companyName": "Ableton",
+        "imageUrl":"images/ableton.png"
     },
     {
         "id": "6",
-        "companyName": "Personal"
+        "companyName": "Bicocca",
+        "imageUrl":"images/bicocca.png"
     }
 
 ]

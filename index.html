@@ -67,9 +67,12 @@
 
   <!-- TEMPLATES -->
   <script type="text/template" id="job-dropdown-item-template">
-  <li>
-      <%= item.get('companyName') %>
-  </li>
+      <img class="dropdownImage" src= <%= item.get('imageUrl') %> >
+      <span><%= item.get('companyName') %> </span>
+  </script>
+
+  <script type="text/template" id="job-dropdown-template">
+  <div></div>
   </script>
 
   <!-- Test -->

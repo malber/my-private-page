@@ -1,2 +1,22 @@
 #timelineChart {
 }
+
+img.dropdownImage {
+  width:  30px;
+  height: auto;
+	margin-left: 10px;
+  vertical-align: middle;
+}
+
+.JobDropdownViewItem{
+  height: 50px;
+  cursor:pointer;
+}
+
+.JobDropdownViewItem span:first-of-type{
+		margin-left: 10px;
+
+}
+
+
+p { display: inline }

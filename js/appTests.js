@@ -9,3 +9,5 @@ function dummyTest(){
   		assert.ok( 1 == "1", "Passed!" );
 	});
 }
+
+runTests();

@@ -1,3 +1,6 @@
 [submodule "Chart.js"]
 	path = Chart.js
 	url = https://github.com/nnnick/Chart.js.git
+[submodule "scripts"]
+	path = scripts
+	url = https://github.com/malber/backboneViewCollectionScript.git

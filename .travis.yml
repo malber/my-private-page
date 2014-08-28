@@ -9,6 +9,6 @@ before_script:
   - "sh -e /etc/init.d/xvfb start"
   - npm install connect
   - node server/server.js &
-  - sleep 5
+  - sleep 10
 
 script: phantomjs test/qunit/run-qunit.js "http://127.0.0.1:3000/test.html"

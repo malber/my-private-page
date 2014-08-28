@@ -22,10 +22,8 @@ var GithubDropdownView = Backbone.View.extend({
     render: function() {
         self = this;
         this.$el.empty();
-        __("pre!");
         // this.$el.append(this.template());
         this.collection.each(function(model) {
-            __(model);
             var tmp = new GithubDropdownViewItem({model: model});
             self.$el.append(tmp.$el);
         });

@@ -22,7 +22,6 @@ var JobMainBodyView = Backbone.View.extend({
     render: function() {
         self = this;
         this.$el.empty();
-        __(self);
         // this.$el.append(this.template());
         this.collection.each(function(model) {
             var tmp = new JobMainBodyViewItem({model: model});

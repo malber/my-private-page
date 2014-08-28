@@ -99,6 +99,20 @@
   </script>
 
 
+<!-- Main Container of SpareTimeProjects -->
+<div id="SpareTimeProjectsListViewContainer" ></div>
+
+
+
+
+<!-- TEMPLATES -->
+<!-- Template SpareTimeProjects item -->
+<script type="text/template" id="SpareTimeProjects-item-template">
+  <span><%= item.get('id') %> </span>
+  <span><%= item.get('projectName') %> </span>
+</script>
+<script type="text/template" id="SpareTimeProjects-list-template">
+</script>
 
 
   <!-- Test -->
@@ -123,6 +137,13 @@
     <script src="js/JobCollection.js"></script>
     <script src="js/JobDropdownView.js"></script>
     <script src="js/JobMainBodyView.js"></script>
+
+
+    <!-- Includes -->
+    <script src="js/SpareTimeProjects.js"></script>
+    <script src="js/SpareTimeProjectsCollection.js"></script>
+    <script src="js/SpareTimeProjectsView.js"></script>
+
 
     <script src="js/GithubProject.js"></script>
     <script src="js/GithubProjectCollection.js"></script>

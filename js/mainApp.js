@@ -16,7 +16,6 @@ function onAppLaunch(){
 function onLoadedModels(){
 
 //	g_controller = new Controller(g_model);
-	__(g_model.gProjCollection);
 	g_view = new View({model: g_model});
 	return;
 }

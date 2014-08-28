@@ -10,7 +10,7 @@
         "id": "2",
         "companyName": "Fastcom",
         "imageUrl":"images/fastcom.png",
-        "role":"Ph.D / post-doctoral researcher",
+        "role":"Project Engineer",
         "description":"Project and team manager (Agile) in the consulting branch of Fastcom Technology. <br>Example of projects: JSON gateway (Securiton, 80 kCHF): development of a C#/.NET websocket-based messaging gateway between a surveillance software suite and an iOS client. Webclient (Securiton, 350+ kCHF): development of a HTML5/Backbone.js/jQuery webclient for secured area supervision, stream of camera videos and camera control via websocket communication All projects were delivered within schedule with Agile methodologies."
     },
     {

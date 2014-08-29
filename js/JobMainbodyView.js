@@ -1,6 +1,6 @@
 var JobMainBodyViewItem = Backbone.View.extend({
     tagName: 'div',
-    className: 'JobMainBodyViewItem',
+    className: 'item JobMainBodyViewItem',
     initialize: function() {
         this.template = _.template($('#job-mainbody-item-template').html());
         this.render();
@@ -12,7 +12,7 @@ var JobMainBodyViewItem = Backbone.View.extend({
 });
 
 var JobMainBodyView = Backbone.View.extend({
-    el: '#JobMainBodyView',
+    el: '#JobCarouselView',
     tagName: 'ul',
     className: 'todolist',
     initialize: function() {
@@ -23,9 +23,14 @@ var JobMainBodyView = Backbone.View.extend({
         self = this;
         this.$el.empty();
         // this.$el.append(this.template());
+        var i=0;
         this.collection.each(function(model) {
             var tmp = new JobMainBodyViewItem({model: model});
+            if(i==0){
+                tmp.$el.addClass('active');
+            }
             self.$el.append(tmp.$el);
+            i++;
         });
         return this;
     }

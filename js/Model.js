@@ -11,19 +11,29 @@ var Model = Backbone.Model.extend({
 
     syncModelsLoad : function(){
         $.when(
-            this.mJobCollection.fetch(),
-            this.gProjCollection.fetch()
-            ).always(onLoadedModels);
+            this.mJobCollection.fetch()
+            ).done(onLoadedSyncModels);
+    },
+
+
+    asyncModelsLoad : function(){
+        this.gProjCollection.fetch({
+            success : function(){
+                onLoadedAsyncModels();
+            },
+            error: function(){
+                alert("error loading sync models");
+            }
+        });
 
     },
 
     // Constructor
     initialize: function(){
     	// Do something here
-
-
     	this.mJobCollection = new JobCollection();
         this.gProjCollection = new GithubProjectCollection();
+        this.asyncModelsLoad();
         this.syncModelsLoad();
 
 

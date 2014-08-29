@@ -14,16 +14,18 @@ function onAppLaunch(){
 	g_view = new View({model: g_model});
 }
 
-function onLoadedModels(){
+function onLoadedSyncModels(){
 
-	g_view.createViews();
+	g_view.createSyncViews();
 	return;
 }
 
+function onLoadedAsyncModels(){
 
-function addListeners(){
-	window.addEventListener('resize', resizeCanvas, false);
+	g_view.createAsyncViews();
+	return;
 }
+
 
 function resizeCanvas() {
         canvas.width = window.innerWidth;

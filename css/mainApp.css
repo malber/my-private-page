@@ -1,5 +1,9 @@
+.carousel{
+	min-height: 200px;
+}
+
 .dropdown-menu{
-	background-color: #222222;
+	/*background-color: #222222;*/
 }
 img.dropdownImage {
   width:  30px;

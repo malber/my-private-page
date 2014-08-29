@@ -11,12 +11,12 @@ var g_view = {};
 function onAppLaunch(){
 	// Async loading models
 	g_model = new Model();
+	g_view = new View({model: g_model});
 }
 
 function onLoadedModels(){
 
-//	g_controller = new Controller(g_model);
-	g_view = new View({model: g_model});
+	g_view.createViews();
 	return;
 }
 

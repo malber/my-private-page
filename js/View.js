@@ -9,7 +9,7 @@ View = Backbone.View.extend({
         this.mjobDropdownView = new JobDropdownView({collection : g_model.mJobCollection});
         this.mjobMainBodyView = new JobMainBodyView({collection : g_model.mJobCollection});
         this.ghubDropdownView = new GithubDropdownView({collection : g_model.gProjCollection});
-        // this.spareProjectsView = new SpareTimeProjectsListView({collection : g_model.spareProjectsCollection});
+//        this.spareProjectsView = new SpareTimeProjectsListView({collection : g_model.spareProjectsCollection});
 
     	// Here we have to load all required views
         this.render();

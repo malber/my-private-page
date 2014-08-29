@@ -27,13 +27,13 @@ var Model = Backbone.Model.extend({
         }).always(onLoadedModels);
 
 
-        this.spareProjectsCollection = new SpareTimeProjectsCollection();
-        this.spareProjectsCollection.fetch({
-            success: function() {
+        // this.spareProjectsCollection = new SpareTimeProjectsCollection();
+        // this.spareProjectsCollection.fetch({
+        //     success: function() {
 
-                //this.loadedModelCallback();
-            }
-        }).always(onLoadedModels);
+        //         //this.loadedModelCallback();
+        //     }
+        // }).always(onLoadedModels);
 
   	},
 

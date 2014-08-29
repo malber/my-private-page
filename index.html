@@ -15,6 +15,7 @@
   </head>
   <body>
 	<div class="navbar navbar-default">
+
   <div class="navbar-header">
     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
       <span class="icon-bar"></span>
@@ -23,18 +24,14 @@
     </button>
     <a class="navbar-brand" href="#">Mattia Albergante</a>
   </div>
+
   <div class="navbar-collapse collapse navbar-responsive-collapse">
+  
+    <!-- Left side of things -->
     <ul class="nav navbar-nav">
       <li class="dropdown active">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Professional Experience <b class="caret"></b></a>
         <ul id="JobDropdownView" class="dropdown-menu">
-<!--           <li><a href="#">Action</a></li>
-          <li><a href="#">Another action</a></li>
-          <li><a href="#">Something else here</a></li> 
-          <li class="divider"></li>
-          <li class="dropdown-header">Education</li>
-           <li><a href="#">Separated link</a></li>
-          <li><a href="#">One more separated link</a></li> -->
         </ul>
       </li>
       <li><a href="#">Projects</a></li>
@@ -42,8 +39,8 @@
     </ul>
 
 
+    <!-- Right side of things -->
     <ul class="nav navbar-nav navbar-right">
-    <div class="navbar-collapse collapse navbar-responsive-collapse">
       <li class="dropdown">
         
         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -62,7 +59,6 @@
       </li>
     </div>
     </ul>
-  </div>
 </div>
 
 
@@ -118,7 +114,13 @@
 
   <!-- Template for github dropdown item -->
   <script type="text/template" id="github-dropdown-item-template">
-      <div><%= item.get('name') %> </div>
+      <a href=
+      <%= item.get('html_url') %>
+      >
+        <div>
+          <%=item.get('name')  %>
+        </div>
+      </a>
   </script>
 
 

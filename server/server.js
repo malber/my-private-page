@@ -1,7 +1,7 @@
 var connect = require('connect'),
     http = require('http');
+serveStatic = require('serve-static');
 
 connect()
-    .use(connect.static('.'))
-    .use(connect.directory('.')) // lists directory: added onaclove2000 credit
+    .use(serveStatic('.'))
     .listen(3000);

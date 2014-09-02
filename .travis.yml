@@ -1,5 +1,6 @@
 
 language: node_js
+bundler_args: --retry 3
 
 # test on only one node.js version: 0.8
 node_js:
@@ -9,6 +10,6 @@ before_script:
   - "sh -e /etc/init.d/xvfb start"
   - npm install connect
   - node server/server.js &
-  - sleep 10
+  - sleep 15
 
 script: phantomjs test/qunit/run-qunit.js "http://127.0.0.1:3000/test.html"

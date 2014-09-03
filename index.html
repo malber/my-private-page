@@ -2,7 +2,6 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap 101 Template</title>
 
@@ -14,8 +13,8 @@
 
   </head>
   <body>
-	<div class="navbar navbar-default">
 
+	<div class="navbar navbar-default">
   <div class="navbar-header">
     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
       <span class="icon-bar"></span>
@@ -57,37 +56,18 @@
           <li><a href="#">Separated link</a></li>
         </ul>
       </li>
-    </div>
     </ul>
-</div>
-
-
-
-
-
-<!-- Carousel test -->
-<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-  <!-- Indicators -->
-  <ol class="carousel-indicators">
-    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="3"></li>
-  </ol>
-
-  <!-- Wrapper for slides -->
-  <div id="JobCarouselView" class="carousel-inner">
-
+  </div>
   </div>
 
-  <!-- Controls -->
-  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left"></span>
-  </a>
-  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right"></span>
-  </a>
-</div>
+
+
+
+
+
+<!-- Carousel template -->
+<div id="JobCarouselViewContainer" class="carousel slide" data-ride="carousel"></div>
+
 
 
 
@@ -109,6 +89,18 @@
   <script type="text/template" id="job-dropdown-item-template">
       <img class="dropdownImage" src= <%= item.get('imageUrl') %> >
       <span><%= item.get('companyName') %> </span>
+  </script>
+
+  <!-- template for carousel -->
+  <script type="text/template" id="job-carousel-template">
+  <ol class="carousel-indicators"></ol>
+  <div class="carousel-inner"></div>
+  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+  </a>
   </script>
 
 
@@ -161,7 +153,7 @@
     <script src="js/Job.js"></script>
     <script src="js/JobCollection.js"></script>
     <script src="js/JobDropdownView.js"></script>
-    <script src="js/JobMainBodyView.js"></script>
+    <script src="js/JobCarouselView.js"></script>
 
 
     <!-- Includes -->
@@ -176,8 +168,6 @@
 
     <script src="js/Model.js"></script>
     <script src="js/View.js"></script>
-
-    <!--<script src="js/Controller.js"></script>-->
 
 
   	<!-- Main app and tests -->

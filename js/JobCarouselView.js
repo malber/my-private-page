@@ -12,34 +12,47 @@ var JobCarouselViewItem = Backbone.View.extend({
 });
 
 var JobCarouselView = Backbone.View.extend({
-    el: '#JobCarouselView',
+
+    el: '#JobCarouselViewContainer',
     tagName: 'ul',
     className: 'todolist',
+    slidingPart : null,
+
     initialize: function() {
-        // No template for this class
+        this.template = _.template($('#job-carousel-template').html());
         this.render();
     },
-    render: function() {
-        self = this;
-        this.$el.empty();
-        // this.$el.append(this.template());
-        this.addCarouselDots();
 
+    createCarouselAndSetTransitionTime : function(){
+        this.$el.carousel({interval : false});
+        this.$el.html(this.template());
+        this.slidingPart = this.$el.children(".carousel-inner");
+    },
+
+    addCarouselElements: function(){
+        self = this;
+
+        
+        this.slidingPart.empty();
         var i=0;
         this.collection.each(function(model) {
             var tmp = new JobCarouselViewItem({model: model});
             if(i==0){
                 tmp.$el.addClass('active');
             }
-            self.$el.append(tmp.$el);
+            self.slidingPart.append(tmp.$el);
             i++;
         });
+    },
 
-
+    render: function() {
+        this.createCarouselAndSetTransitionTime();
+        this.addCarouselElements();
+        this.addCarouselDots();
         return this;
     },
     addCarouselDots : function(){
-        var dotsContainer = this.$el.siblings('.carousel-indicators').empty();
+        var dotsContainer = this.slidingPart.siblings('.carousel-indicators').empty();
         dotsContainer.empty();
         var cdotsView = '<li data-target="#carousel-example-generic" data-slide-to="{0}"></li>';
         var i=0;

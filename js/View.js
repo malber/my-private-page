@@ -12,7 +12,6 @@ View = Backbone.View.extend({
     createSyncViews : function(){
         this.mjobDropdownView = new JobDropdownView({collection : g_model.mJobCollection});
         this.mjobCarouselView = new JobCarouselView({collection : g_model.mJobCollection});
-        __(this.mjobCarouselView)
     },
     createAsyncViews : function(){
         this.ghubDropdownView = new GithubDropdownView({collection : g_model.gProjCollection});

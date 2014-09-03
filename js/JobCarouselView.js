@@ -23,8 +23,7 @@ var JobCarouselView = Backbone.View.extend({
         this.render();
     },
 
-    createCarouselAndSetTransitionTime : function(){
-        this.$el.carousel({interval : false});
+    injectTemplate : function(){
         this.$el.html(this.template());
         this.slidingPart = this.$el.children(".carousel-inner");
     },
@@ -32,7 +31,6 @@ var JobCarouselView = Backbone.View.extend({
     addCarouselElements: function(){
         self = this;
 
-        
         this.slidingPart.empty();
         var i=0;
         this.collection.each(function(model) {
@@ -46,18 +44,18 @@ var JobCarouselView = Backbone.View.extend({
     },
 
     render: function() {
-        this.createCarouselAndSetTransitionTime();
+        this.injectTemplate();
         this.addCarouselElements();
         this.addCarouselDots();
         return this;
     },
     addCarouselDots : function(){
-        var dotsContainer = this.slidingPart.siblings('.carousel-indicators').empty();
-        dotsContainer.empty();
-        var cdotsView = '<li data-target="#carousel-example-generic" data-slide-to="{0}"></li>';
+        self = this;
+        var dotsContainer = this.$el.children('.carousel-indicators').empty();
+        var cdotsView = '<li data-target="#{0}" data-slide-to="{1}"></li>';
         var i=0;
         this.collection.each(function(model) {
-            var el = $(__s(cdotsView,i));
+            var el = $(__s(cdotsView,self.$el.attr('id'),i));
             if(i==0){
                 el.addClass("active");
             }

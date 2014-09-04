@@ -1,6 +1,25 @@
 .carousel{
 	min-height: 200px;
 }
+.carousel-inner {
+    height: 100%;
+    /*left: 10%;*/
+    overflow: hidden;
+    position: absolute;
+    /*width: 80%;*/
+}
+.carousel-inner > .jobCarouselItem {
+	top:5%;
+    height: 90%;
+    left: 10%;
+    overflow: hidden;
+    position: absolute;
+    width: 80%;
+    vertical-align: middle;
+	margin: 20px 20px 20px 5px;
+}
+
+
 
 .dropdown-menu{
 	/*background-color: #222222;*/
@@ -29,10 +48,6 @@ img.navbar-img{
 
 }
 
-.JobMainBodyViewItem{
-	margin: 20px 20px 20px 5px;
-
-}
 div.jobBodyText{
 	max-width: 800px;
 	text-align: justify;

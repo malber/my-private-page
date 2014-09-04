@@ -1,6 +1,6 @@
 var JobCarouselViewItem = Backbone.View.extend({
     tagName: 'div',
-    className: 'item JobMainBodyViewItem',
+    className: 'item jobCarouselItem',
     initialize: function() {
         this.template = _.template($('#job-mainbody-item-template').html());
         this.render();
@@ -43,10 +43,17 @@ var JobCarouselView = Backbone.View.extend({
         });
     },
 
+    stopSliding : function(){
+        this.$el.carousel({
+            interval: false
+        });
+    },
+
     render: function() {
         this.injectTemplate();
 //        this.addCarouselDots();
         this.addCarouselElements();
+        this.stopSliding();
         return this;
     },
     addCarouselDots : function(){

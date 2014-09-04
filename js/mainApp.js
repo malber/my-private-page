@@ -8,8 +8,15 @@ $(document).ready(function() {
 var g_model = {};
 var g_view = {};
 
+function setDefaults(){
+	$.fn.carousel.defaults = {
+    interval: false
+  , pause: 'hover'
+  }
+}
 function onAppLaunch(){
 	// Async loading models
+	setDefaults();
 	g_model = new Model();
 	g_view = new View({model: g_model});
 }

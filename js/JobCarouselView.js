@@ -45,8 +45,8 @@ var JobCarouselView = Backbone.View.extend({
 
     render: function() {
         this.injectTemplate();
+//        this.addCarouselDots();
         this.addCarouselElements();
-        this.addCarouselDots();
         return this;
     },
     addCarouselDots : function(){
